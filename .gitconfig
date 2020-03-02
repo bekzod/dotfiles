@@ -1,0 +1,23 @@
+[user]
+	email = bekzod@me.com
+	name = bekzod
+[core]
+	excludesfile = /Users/bek/.gitignore_global
+	editor = /Applications/Sublime\\ Text\\ 2.app/Contents/SharedSupport/bin/subl -w
+	ignorecase = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[branch]
+	autosetuprebase = always
+[push]
+	default = simple
+[commit]
+	template = /Users/bek/.stCommitMsg
+[gui]
+	recentrepo = /Users/bek/repos/events-uz
+[alias]
+	setup-fetching-prs = git remote prune origin config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*' && git fetch origin
